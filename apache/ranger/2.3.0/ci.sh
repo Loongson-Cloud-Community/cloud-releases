@@ -1,6 +1,0 @@
-#!/bin/bash
-
-set -o errexit
-set -o nounset
-
-mvn clean package -DskipTests -Dmaven.wagon.http.ssl.insecure=true -Dmaven.wagon.http.ssl.allowall=true -Dmaven.wagon.http.ssl.ignore.validity.dates=true
