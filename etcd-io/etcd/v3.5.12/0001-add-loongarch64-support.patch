@@ -1,0 +1,24 @@
+From c805ccaacec984ec785cb220ee43871f46e47507 Mon Sep 17 00:00:00 2001
+From: sarto <sarto@merore.com>
+Date: Mon, 11 Mar 2024 10:45:26 +0800
+Subject: [PATCH] add loongarch64 support
+
+---
+ server/etcdmain/etcd.go | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/server/etcdmain/etcd.go b/server/etcdmain/etcd.go
+index 9921b89..0ac9c67 100644
+--- a/server/etcdmain/etcd.go
++++ b/server/etcdmain/etcd.go
+@@ -471,6 +471,7 @@ func checkSupportArch() {
+ 	// to add a new platform, check https://github.com/etcd-io/website/blob/main/content/en/docs/next/op-guide/supported-platform.md
+ 	if runtime.GOARCH == "amd64" ||
+ 		runtime.GOARCH == "arm64" ||
++		runtime.GOARCH == "loong64" ||
+ 		runtime.GOARCH == "ppc64le" ||
+ 		runtime.GOARCH == "s390x" {
+ 		return
+-- 
+2.20.1
+
