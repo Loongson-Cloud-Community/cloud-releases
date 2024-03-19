@@ -42,10 +42,10 @@ function prepare()
 }
 
 # 在 BUILDDIR 下为源码打补丁
-function patch()
+function apply_patch()
 {
-  if [ -z $PATCH ]; then
-    patch -d ${SOURCE} -p1 < ../${PATCH}
+  if [ -f ../$PATCH ]; then
+    patch -d ${SOURCEDIR} -p1 -i ../../${PATCH}
   fi
 }
 
@@ -82,6 +82,7 @@ function main()
 
   cd $BUILDDIR
   prepare
+  apply_patch
   cd $SOURCEDIR
 
   build

@@ -14,12 +14,3 @@ new:
 latest:
 	@ver=$(shell ./scripts/latest_version.sh); \
 	./scripts/new_version.sh $${ver}
-
-batch:
-	@for tag in ${TAGS}; do \
-		rm -rf $${tag}; \
-		make VERSION=$${tag}; \
-		pushd $${tag}; \
-		./ci.sh; \
-		popd; \
-	done;
