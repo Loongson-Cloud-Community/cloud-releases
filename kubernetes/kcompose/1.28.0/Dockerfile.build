@@ -1,8 +1,8 @@
-FROM cr.loongnix.cn/openanolis/anolisos:8.8
+FROM lcr.loongnix.cn/openeuler/openeuler:22.03-LTS
 
 # install essential tools
 RUN yum update -y && \
-  yum install git curl -y
+  yum install git curl make tar -y
 
 ADD lib lib
 
@@ -11,7 +11,7 @@ ADD lib lib
 ## 
 ## RUN ./lib/install-maven.sh 3.6.3
 ##
-## RUN ./lib/install-golang.sh 20
+RUN cd lib && ./install-golang.sh 20
 
 # Install packages
 ## RUN yum install -y xxx
