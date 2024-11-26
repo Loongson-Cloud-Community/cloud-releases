@@ -22,6 +22,9 @@ check_system_type(){
 	if grep -qs "Debian" /etc/os-release;then
 		echo "Debian System."
 		return 0
+	elif grep -qs "Alpine" /etc/os-release ;then
+                echo "Alpine System or Using apk."
+                return 1
 	elif grep -qs "Anolis" /etc/os-release || grep -qs "openEuler" /etc/os-release || command -v yum &> /dev/null;then
 		echo "Red hat System or Using yum."
 		return 1
