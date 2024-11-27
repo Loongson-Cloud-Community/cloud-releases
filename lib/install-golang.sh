@@ -49,7 +49,7 @@ GOLANG18="http://ftp.loongnix.cn/toolchain/golang/go-1.18/abi$ABI/go1.18.10.linu
 GOLANG19="http://ftp.loongnix.cn/toolchain/golang/go-1.19/abi$ABI/go1.19.7.linux-loong64.tar.gz"
 GOLANG20="http://ftp.loongnix.cn/toolchain/golang/go-1.20/abi$ABI/go1.20.6.linux-loong64.tar.gz"
 GOLANG21="http://ftp.loongnix.cn/toolchain/golang/go-1.21/abi$ABI/go1.21.0.linux-loong64.tar.gz"
-GOLANG22="http://ftp.loongnix.cn/toolchain/golang/go-1.22/abi$ABI/go1.22.0.linux-loong64.tar.gz"
+GOLANG22="http://ftp.loongnix.cn/toolchain/golang/go-1.22/abi$ABI/go1.22.6.linux-loong64.tar.gz"
 
 DOWNLOAD_URL=""
 GOLANG_VERSION=""
