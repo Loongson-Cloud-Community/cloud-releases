@@ -1,0 +1,17 @@
+name: merge-pr
+on:
+  schedule:
+    - cron: '* */1 * * *'  --- 每小时跑一次
+  workflow_dispatch:
+
+
+    - name: Run merge script
+      uses: klay-ke/auto-merge-pr@master  --- 该地址以后可能会改
+      id: merge-pr
+      with:
+        send-to-dingtalk-group: true
+        dingtalk-access-token: ${{ secrets.DINGTALK_ACCESS_TOKEN }}
+        dingtalk-secret: ${{ secrets.DINGTALK_SECRET }}
+        maintainer-team-name: ${{ secrets.MAINTAINER_TEAM_NAME }}
+        gh-token: ${{ secrets.GH_TOKEN }}
+        ci-command: 'bash ./build.sh'
