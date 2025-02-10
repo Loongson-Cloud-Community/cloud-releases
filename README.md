@@ -29,6 +29,14 @@ make ci
 
 ## 通用工具包 lib
 用于 Dcokerfile.build 的实用脚本，可以安装 java，maven，golang(abi1.0 abi2.0) 等。
+install-maven 和 install-golang.sh 自动检测环境 
+其中install-maven 使用自动检测环境脚本确定配置文件
+
+install-maven.sh (版本号)
+example: install-maven.sh 3.6.3
+
+install-golang.sh （版本号）
+example:install-golang.sh 19
 
 ## 避免 jar 包重复下载耗时
 

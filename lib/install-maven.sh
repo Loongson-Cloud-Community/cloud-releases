@@ -22,10 +22,22 @@ install_maven()
   popd
 }
 
+# 调用系统检测脚本
+source check-devlopment.sh
+
+# 检查系统类型并设置 ABI
+A=$(check_system_type; echo $?)
+
+
 install_loongson_settings()
 {
   mkdir -pv ~/.m2
-  cp $lib_path/loongson-maven.xml ~/.m2/settings.xml
+  if [ $A -eq "1" ];then
+	cp $lib_path/loongson-maven-abi1.0.xml ~/.m2/settings.xml
+  else
+	cp $lib_path/loongson-maven-abi2.0.xml ~/.m2/settings.xml
+  fi
+
 }
 
 MAVEN_VERSION=$1
